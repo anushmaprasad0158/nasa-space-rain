@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">WH</div>
+    <div class="nav">
+      <i>🏠</i>
+      <i>🌍</i>
+      <i>🌡</i>
+      <i>⚙</i>
+    </div>
+    <div class="profile">
+      <img src="https://i.pravatar.cc/100" alt="profile">
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Topbar -->
+    <div class="topbar">
+      <h1>weather Hub</h1>
+      <div class="search">
+        <i>🔍</i>
+        <input type="text" placeholder="Enter City name">
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid">
+      <!-- Today Weather -->
+      <div class="card today-weather">
+        <h2>Today</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" alt="cloudy">
+        <h3>0°C / 32°F</h3>
+        <p>Friday, Nov 8, 2024</p>
+      </div>
+
+      <!-- Map -->
+      <div class="map"></div>
+
+      <!-- Soon Card -->
+      <div class="card">
+        <h2>Soon</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/1116/1116453.png" alt="forecast" style="width:80px;">
+      </div>
+    </div>
+
+    <!-- Forecast Section -->
+    <h2 class="forecast-title">7 Days Forecast</h2>
+    <div class="forecast">
+      <div class="card">
+        <h3>Weekly Forecast</h3>
+        <div class="bars">
+          <div class="bar"><span style="width: 70%"></span></div>
+          <div class="bar"><span style="width: 50%"></span></div>
+          <div class="bar"><span style="width: 80%"></span></div>
+          <div class="bar"><span style="width: 60%"></span></div>
+          <div class="bar"><span style="width: 90%"></span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Sunrise & Sunset</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="80">
+      </div>
+      <div class="card">
+        <h3>Wind / Pressure</h3>
+        <canvas id="windChart" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
